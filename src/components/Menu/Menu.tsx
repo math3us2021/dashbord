@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
@@ -17,7 +16,6 @@ import Button from "@mui/material/Button";
 import EventAvailableIcon from "@mui/icons-material/EventAvailable";
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import "./Menu.css";
-import Modal from "../Modal/ModalRegras";
 import Swal from 'sweetalert2';
 
 const drawerWidth = 240;
@@ -91,10 +89,9 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer({openModal}: any) {
+export default function MiniDrawer({ openModal }: any) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [isVisible, setisVisible] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -104,7 +101,7 @@ export default function MiniDrawer({openModal}: any) {
     setOpen(false);
   };
 
-  function modal(){
+  function modal() {
     Swal.fire('O belissimo Unicornio rosa solta estrelinhas através do seu chifre, e seu poder mata as bruxas, ao qual deve ser atingida pela mesma.')
   }
 
@@ -149,7 +146,7 @@ export default function MiniDrawer({openModal}: any) {
                   <EventAvailableIcon />
                 </div>
                 <div>
-                  <Button  size="large" style={{ textAlign: "left",color: "#f8a0be" }} onClick={modal} >
+                  <Button size="large" style={{ textAlign: "left", color: "#f8a0be" }} onClick={modal} >
                     Regras
                   </Button>
                 </div>
@@ -163,8 +160,8 @@ export default function MiniDrawer({openModal}: any) {
                 <div>
                   <Button
                     size="large"
-                    style={{ textAlign: "left",color: "#f8a0be"  }}
-                  
+                    style={{ textAlign: "left", color: "#f8a0be" }}
+
                   >
                     Vá ao jogo
                   </Button>
@@ -192,13 +189,9 @@ export default function MiniDrawer({openModal}: any) {
             Jogo infantil
           </Typography>
           <div>
-            <div>
-              {isVisible && <Modal onClose={() => setisVisible(false)} />}      
               <div className="tabela">
-              <Tabela />
-            </div>
-            </div>
-          
+                <Tabela />
+              </div>
           </div>
         </Box>
       </Box>
