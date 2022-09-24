@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import './app.css';
+import Header from "./components/Menu/Menu";
+import Modal from "./components/Modal/ModalRegras";
+
+
 
 function App() {
+  const [isVisible, setisVisible] = React.useState(false);
+
+  function openModal(){ 
+    setisVisible(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      
+    {isVisible && <Modal onClose={() => setisVisible(false)} />}
+   <div>
+      <Header click={openModal} />
+    
+   </div>
+   </div>
   );
 }
 

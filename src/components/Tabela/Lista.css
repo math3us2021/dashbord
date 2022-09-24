@@ -1,0 +1,11 @@
+.lista{
+    justify-content: center;
+    display: flex;
+    flex-direction: wrap;  
+}
+
+.linha{
+    margin: 20px;
+    text-align: center;
+    color: #ab6f83;
+}

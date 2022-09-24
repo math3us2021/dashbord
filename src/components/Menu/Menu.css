@@ -1,0 +1,33 @@
+.but{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    padding: 0px;
+    display: inline-flex;
+}
+
+.li{
+    list-style-type: none;
+    
+}
+
+.ull{
+    padding: 0;
+    margin: 10px;
+}
+
+.icon{
+    margin-right: 40px;
+    margin-left: 10px;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+}
+.mod{
+    /* display: flex; */
+    /* justify-content: center; */
+ 
+}
